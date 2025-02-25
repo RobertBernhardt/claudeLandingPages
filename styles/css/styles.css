@@ -1,0 +1,108 @@
+/*
+    Filepath: styles/css/styles.css
+    Custom styling and Tailwind configuration
+*/
+
+/* Tailwind configuration - injected through JavaScript */
+/* This file adds custom CSS rules beyond Tailwind's utility classes */
+
+/* Custom theme colors used throughout the landing page */
+:root {
+    --color-primary: #3B82F6;   /* Blue */
+    --color-secondary: #10B981; /* Green */
+    --color-accent: #F59E0B;    /* Amber */
+    --color-dark: #1F2937;      /* Dark Gray */
+    --color-light: #F3F4F6;     /* Light Gray */
+}
+
+/* Custom utility classes */
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.text-dark {
+    color: var(--color-dark);
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary);
+}
+
+.bg-accent {
+    background-color: var(--color-accent);
+}
+
+.bg-dark {
+    background-color: var(--color-dark);
+}
+
+.bg-light {
+    background-color: var(--color-light);
+}
+
+.border-primary {
+    border-color: var(--color-primary);
+}
+
+.border-secondary {
+    border-color: var(--color-secondary);
+}
+
+.border-accent {
+    border-color: var(--color-accent);
+}
+
+.hover\:bg-primary:hover {
+    background-color: var(--color-primary);
+}
+
+.hover\:bg-blue-600:hover {
+    background-color: #2563EB; /* Darker blue for hover states */
+}
+
+.hover\:text-primary:hover {
+    color: var(--color-primary);
+}
+
+.hover\:text-accent:hover {
+    color: var(--color-accent);
+}
+
+.hover\:text-white:hover {
+    color: #ffffff;
+}
+
+/* FAQ accordion styles */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 1000px; /* Large enough to accommodate content */
+}
+
+/* Form styles */
+.error-message {
+    color: #EF4444; /* Red-500 */
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+input.border-red-500,
+textarea.border-red-500 {
+    border-color: #EF4444;
+}
