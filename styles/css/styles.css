@@ -1,44 +1,21 @@
 /*
     Filepath: styles/css/styles.css
     Custom styling and Tailwind configuration
-    
-    This file adds custom CSS rules beyond Tailwind's utility classes.
-    While Tailwind handles most of the styling through utility classes,
-    this file provides:
-    
-    1. CSS variables for consistent theme colors
-    2. Custom utility classes that aren't available in Tailwind
-    3. Specialized component styles (like for the FAQ accordion)
-    4. Custom form styling, including error states
-    
-    Most styling should still be done with Tailwind classes directly in the HTML,
-    but these additions help with consistency and special cases.
 */
 
-/* 
- * Custom theme colors used throughout the landing page
- * 
- * These CSS variables define the main color palette.
- * By using variables, we can easily update colors in one place.
- * These match the colors defined in tailwind-config.js.
- */
- :root {
-    /* Main color palette - Change these values to update the site's color scheme */
-    --color-primary: #3B82F6;   /* Blue - Main brand color */
-    --color-secondary: #10B981; /* Green - Success and secondary elements */
-    --color-accent: #F59E0B;    /* Amber - Attention-grabbing elements */
-    --color-dark: #1F2937;      /* Dark Gray - Text and dark backgrounds */
-    --color-light: #F3F4F6;     /* Light Gray - Backgrounds and subtle elements */
+/* Tailwind configuration - injected through JavaScript */
+/* This file adds custom CSS rules beyond Tailwind's utility classes */
+
+/* Custom theme colors used throughout the landing page */
+:root {
+    --color-primary: #3B82F6;   /* Blue */
+    --color-secondary: #10B981; /* Green */
+    --color-accent: #F59E0B;    /* Amber */
+    --color-dark: #1F2937;      /* Dark Gray */
+    --color-light: #F3F4F6;     /* Light Gray */
 }
 
-/* 
- * Custom utility classes
- * 
- * These classes provide consistent color application across the site.
- * They connect the CSS variables with actual styling properties.
- */
-
-/* Text color utility classes */
+/* Custom utility classes */
 .text-primary {
     color: var(--color-primary);
 }
@@ -55,7 +32,6 @@
     color: var(--color-dark);
 }
 
-/* Background color utility classes */
 .bg-primary {
     background-color: var(--color-primary);
 }
@@ -76,7 +52,6 @@
     background-color: var(--color-light);
 }
 
-/* Border color utility classes */
 .border-primary {
     border-color: var(--color-primary);
 }
@@ -89,7 +64,6 @@
     border-color: var(--color-accent);
 }
 
-/* Hover state utility classes */
 .hover\:bg-primary:hover {
     background-color: var(--color-primary);
 }
@@ -110,39 +84,24 @@
     color: #ffffff;
 }
 
-/* 
- * FAQ accordion styles
- * 
- * These styles control the appearance and behavior of expandable FAQ items.
- * The accordion.js file uses these to animate the opening/closing.
- */
+/* FAQ accordion styles */
 .faq-answer {
-    /* Hidden by default */
     max-height: 0;
     overflow: hidden;
-    /* Smooth transition when expanding/collapsing */
     transition: max-height 0.3s ease-out;
 }
 
 .faq-item.active .faq-answer {
-    /* When active (expanded), allow sufficient height */
     max-height: 1000px; /* Large enough to accommodate content */
 }
 
-/* 
- * Form styles
- * 
- * These styles handle form validation visual feedback.
- * They're used by the forms.js file when showing errors.
- */
+/* Form styles */
 .error-message {
-    /* Error message styling */
-    color: #EF4444; /* Red-500 from Tailwind's palette */
+    color: #EF4444; /* Red-500 */
     font-size: 0.875rem;
     margin-top: 0.25rem;
 }
 
-/* Input styling when validation fails */
 input.border-red-500,
 textarea.border-red-500 {
     border-color: #EF4444;
